@@ -8,5 +8,21 @@
 </head>
 <body>
    <script  src="javascript.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- <script src="javascript.js"></script> -->
+   <div id="dialog">Choose your tool</div>
+  <input type="radio" id="rock" name="game" value="rock" onclick="radioHandler(this)">
+  <label for="rock">Rock</label><br>
+  <input type="radio" id="paper" name="game" value="paper" onclick="radioHandler(this)">
+  <label for="paper">Paper</label><br>
+  <input type="radio" id="scissors" name="game" value="scissors" onclick="radioHandler(this)">
+  <label for="scissors">Scissors</label>
+</br>
+   <button id="submitBtn" onclick="playGame()" disabled>Play</button>
+   </br>
+
+   <h1 id="user-score">User Score: 0</h1>
+   <h1 id="comp-score">Computer Score: 0</h1>
 </body>
 </html>
