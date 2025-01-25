@@ -12,12 +12,26 @@
 
     <!-- <script src="javascript.js"></script> -->
    <div id="dialog">Choose your tool</div>
-  <input type="radio" id="rock" name="game" value="rock" onclick="radioHandler(this)">
-  <label for="rock">Rock</label><br>
-  <input type="radio" id="paper" name="game" value="paper" onclick="radioHandler(this)">
-  <label for="paper">Paper</label><br>
-  <input type="radio" id="scissors" name="game" value="scissors" onclick="radioHandler(this)">
-  <label for="scissors">Scissors</label>
+   <div class="conrainer">
+   <label for="rock">
+     <input type="radio" id="rock" name="game" value="rock" onclick="radioHandler(this)">
+      <div class="glow-box">
+         <img src="./images/rock.jpg" class="radio-image"/>
+      </div>
+   </label>
+   <label for="paper">
+     <input type="radio" id="paper" name="game" value="paper" onclick="radioHandler(this)">
+      <div class="glow-box">
+         <img src="./images/paper.jpg" class="radio-image"/>
+      </div>
+   </label>
+   <label for="scissors">
+     <input type="radio" id="scissors" name="game" value="scissors" onclick="radioHandler(this)">
+      <div class="glow-box">
+         <img src="./images/scissors.jpg" class="radio-image"/>
+      </div>
+   </label>
+   </div>
 </br>
    <button id="submitBtn" onclick="playGame()" disabled>Play</button>
    </br>

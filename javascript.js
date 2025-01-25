@@ -34,33 +34,48 @@ function playGame(){
 }
 
 function calcResult(){
+    let outcome = ''
     if(typeof computerChoice !== undefined && typeof userChoice !== undefined){
         if(computerChoice == userChoice){
             console.log("TIE")
+            outcome = 0;
         }else if(computerChoice == 0){
             if(userChoice == 1){
-                console.log("User WINS")
-                userScore++
+                outcome = 1
             }else{
-                console.log("Computer WINS")
-                compScore++ 
+                outcome = 2
             }
         }else if(computerChoice == 1){
             if (userChoice == 0){
-                console.log("Computer WINS") 
-                compScore++
+                outcome = 2
             }else{
-                console.log("User WINS") 
-                userScore++
+                outcome = 1
             }
         }else{
             if (userChoice == 0){
-                console.log("User WINS") 
-                userScore++
+                outcome = 1
             }else{
-                console.log("Computer WINS") 
-                compScore++
+                outcome = 2
             } 
+        }
+
+        switch(outcome){
+            case 0:
+                console.log("TIE")
+                alert("TIE")
+            break;
+
+            case 1:
+                console.log("User WINS")
+                userScore++
+                alert("User Wins")
+            break;
+
+            case 2:
+                console.log("Computer Wins")
+                compScore++
+                alert("Computer Wins")
+            break;
         }
 
         document.getElementById("user-score").innerHTML = "User Score: "+userScore

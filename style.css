@@ -1,0 +1,59 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./images/background.jpg');
+    color: wheat;
+}
+
+#dialog{
+    font-size: 38px;
+}
+
+
+
+/* HIDE RADIO */
+[type=radio] { 
+    
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* IMAGE STYLES */
+  .radio-image {
+    cursor: pointer;
+  }
+  
+  /* CHECKED STYLES */
+
+  [type=radio]:checked  + div {
+    
+    z-index:1;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); 
+    filter: brightness(100%);
+    
+  }
+
+  [type=radio]  + div {
+    filter: brightness(50%);
+  }
+
+  [type=radio]:checked  + div:before {
+    z-index:-1;
+    position: absolute;
+    content:"";
+    width:105px;
+    height:105px;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); 
+    filter: blur(20px);
+}
+
+
+  .radio-image{
+    width: 100px;
+    height: 100px;
+  }
